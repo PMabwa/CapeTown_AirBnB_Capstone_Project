@@ -58,7 +58,7 @@ The EDA focused on understanding key trends and distributions in the dataset. Be
    ![Occupancy Rates by Property Type]([path/to/rating-property.png"](https://github.com/PMabwa/airbnb-recommender-system/blob/Festus/images/rating-property.png))
 
 5. **Sentiment Score Distribution**: Analysis of guest review sentiments, highlighting the frequency of positive and negative feedback.  
-   ![Sentiment Score Distribution](path/to/sentiment-score.png)
+   ![Sentiment Score Distribution]([path/to/sentiment-score.png](https://1drv.ms/i/c/5dbeccba30e4cdcb/EYxfGHT4ghVJm5YIw5CZZ4oB4zlGxb620YFLETrzrVyaNA?e=IU57t4))
 
 These visualizations provided a foundation for understanding factors like pricing, guest sentiment, and listing characteristics that inform the recommendations and predictions.
 
