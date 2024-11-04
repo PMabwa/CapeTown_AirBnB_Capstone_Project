@@ -46,19 +46,19 @@ These preprocessing steps allowed for better handling of categorical data and he
 The EDA focused on understanding key trends and distributions in the dataset. Below are some visual insights generated:
 
 1. **Price Distribution**: Showcasing the range and skewness of listing prices.  
-   ![Price Distribution](path/to/Price-distribution.png)
+   ![Price Distribution]([path/to/Price-distribution.png](https://github.com/PMabwa/airbnb-recommender-system/blob/Festus/images/Price-distribution.png))
 
 2. **Property Type Breakdown**: An overview of listing types, such as entire homes, private rooms, etc.  
-   ![Property Type Breakdown](path/to/Property-type.png")
+   ![Property Type Breakdown]([path/to/Property-type.png"](https://github.com/PMabwa/airbnb-recommender-system/blob/Festus/images/Property-type.png))
 
 3. **Neighborhood Popularity**: Visualizing the distribution of listings across various neighborhoods.  
-   ![Neighborhood Popularity](path/to/Neighborhoods.png")
+   ![Neighborhood Popularity]([path/to/Neighborhoods.png"](https://github.com/PMabwa/airbnb-recommender-system/blob/Festus/images/Neighborhoods.png))
 
 4. **Occupancy Rates by Property Type**: Analyzing how occupancy varies among different property types.  
-   ![Occupancy Rates by Property Type](path/to/rating-property.png")
+   ![Occupancy Rates by Property Type]([path/to/rating-property.png"](https://github.com/PMabwa/airbnb-recommender-system/blob/Festus/images/rating-property.png))
 
 5. **Sentiment Score Distribution**: Analysis of guest review sentiments, highlighting the frequency of positive and negative feedback.  
-   ![Sentiment Score Distribution](path/to/sentiment-score.png")
+   ![Sentiment Score Distribution](path/to/sentiment-score.png)
 
 These visualizations provided a foundation for understanding factors like pricing, guest sentiment, and listing characteristics that inform the recommendations and predictions.
 
