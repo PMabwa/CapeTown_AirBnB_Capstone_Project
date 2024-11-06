@@ -1,4 +1,4 @@
-# Airbnb-Recommender-System
+# Airbnb Recommender System
 
 ## Project Overview
 
@@ -9,7 +9,6 @@ This project builds a recommender system for Cape Town Airbnb listings to help h
 The dataset comprises information about Airbnb listings in Cape Town, focusing on features that influence pricing, occupancy, and guest satisfaction. Key data files include:
 
 - **listings.csv**: Contains details about each listing, such as property type, location, amenities, and host information.
-- **calendar.csv**: Shows the availability and pricing for each listing over time.
 - **reviews.csv**: Provides guest feedback, which is used to derive sentiment scores.
 
 ### Key Columns
