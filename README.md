@@ -46,7 +46,7 @@ These preprocessing steps allowed for better handling of categorical data and he
 The EDA focused on understanding key trends and distributions in the dataset. Below are some visual insights generated:
 
 1. **Price Distribution**: Showcasing the range and skewness of listing prices.  
-   ![Price Distribution](Price-distribution.png))
+   ![Price Distribution](images/Price-distribution.png))
 
 2. **Property Type Breakdown**: An overview of listing types, such as entire homes, private rooms, etc.  
    ![Property Type Breakdown](Property-type.png))
