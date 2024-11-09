@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 # Load the saved model from the pickle file
-loaded_model = joblib.load('lgb_model_log.pkl')
+loaded_model = joblib.load('polyregression_model.pkl')
 
 # Load the aggregated data
 capetown_aggregated_df = pd.read_csv("capetown_aggregated_df.csv")
