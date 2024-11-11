@@ -76,7 +76,7 @@ This analysis helped highlight the factors contributing to positive guest experi
 
 ### Prediction Model for Optimal Pricing
 
-To identify the most accurate model for predicting Airbnb listing prices, several models were tested, with **LightGBM** emerging as the best-performing model due to its ability to handle large datasets efficiently and capture non-linear relationships effectively. This is the detailed summary of all the models used:
+To identify the most accurate model for predicting Airbnb listing prices, several models were tested, with **Polynomial Regression Model** emerging as the best-performing model due to its ability to handle large datasets efficiently and capture non-linear relationships effectively. This is the detailed summary of all the models used:
 
 | **Model**                          	| **Train RMSE** 	| **Test RMSE** 	| **R² Score** 	|
 |------------------------------------	|----------------	|---------------	|--------------	|
@@ -86,26 +86,28 @@ To identify the most accurate model for predicting Airbnb listing prices, severa
 | Random Forest                      	| 0.17           	| 0.57          	| 0.7408       	|
 | KNN Regression Model               	| 0.56           	| 0.68          	| 0.6616       	|
 | Tuned KNN Model (with Grid Search) 	| 0.54           	| 0.68          	| 0.6621       	|
+| **Polynomial Regression**           | **0.58**        | **0.64**        |**0.6920**     |
 | XGBoost Model                      	| 0.43           	| 0.55          	| 0.7579       	|
 | LightGBM Model                     	| 0.32           	| 0.54          	| 0.7699       	|
 | Neural Network Model               	| 0.56           	| 0.64          	| 0.6900       	|
 
-#### Best Model Selection: LightGBM
+#### Best Model Selection: Polynomial Regression Model
 
 - **Metrics**: Evaluated using Root Mean Square Error (RMSE) and Mean Absolute Error (MAE).
 - **Performance Summary**:
-  - Train RMSE: 0.32, Test RMSE: 0.54
-  - Train MAE: 0.21, Test MAE: 0.32
-  - R²: 0.77
+  - Train RMSE: 0.58, Test RMSE: 0.64
+  - Train MAE: 0.35, Test MAE: 0.37
+  - R²: 0.6920
 
 ### Recommender System Model (Collaborative Filtering)
 
 For personalized recommendations based on user sentiment, collaborative filtering methods were employed. These models utilize sentiment scores derived from guest reviews to make relevant listing suggestions.
 
-#### Models Used
-
-1. **Singular Value Decomposition (SVD)**: Generates recommendations based on sentiment scores with a matrix factorization approach.
-2. **K-Nearest Neighbors with Baseline (KNNBaseline)**: Implements a user-based collaborative filtering model using Pearson similarity.
+### Models Used (SVD, KNNBaseline, BaselineOnly, SlopeOne)
+- **SVD**: Singular Value Decomposition, leveraging latent factors from review sentiment data.
+- **KNNBaseline**: Collaborative filtering based on user-user similarity.
+- **BaselineOnly**: A baseline model that estimates biases for users and items.
+- **SlopeOne**: A collaborative filtering model that provides item-item similarity-based predictions.
 
 #### Model Evaluation Metrics
 
@@ -115,12 +117,14 @@ The following metrics were used to evaluate the collaborative filtering models:
 |----------------------|-------|-------|
 | **SVD**              | 0.4491 | 0.2419 |
 | **KNN with Baseline**| 0.4728 | 0.2594 |
+| **BaselineOnly**     | 0.3762 | 0.2396 |
+| **SlopeOne**         | 0.3821 | 0.2342 |
 
-The **SVD model** outperformed the other models in terms of RMSE and MAE, demonstrating its suitability for sentiment-driven recommendations.
+The **BaselineOnly model** outperformed the other models in terms of RMSE and MAE, demonstrating its suitability for sentiment-driven recommendations.
 
-### Summary
+#### Summary
 
-The **LightGBM** model was selected for optimal price prediction, while **SVD** was identified as the most effective model for the collaborative filtering-based recommender system. Together, these models support optimized pricing and personalized recommendations for Airbnb listings.
+The **BaselineOnly** model showed superior performance, with the lowest RMSE and MAE, indicating it provides the most accurate recommendations. The **SlopeOne** model also performed well but with slightly higher error metrics.
 
 ## Usage and Recommendations
 
@@ -133,7 +137,7 @@ This section guides utilizing the models and data insights from this project:
    - Use the model output to adjust pricing based on location, property type, seasonality, and other key factors identified.
 
 2. **Recommender System**:
-   - Use the SVD-based recommendation model to provide personalized listing suggestions for guests based on review sentiment.
+   - Use the BaselineOnly recommendation model to provide personalized listing suggestions for guests based on review sentiment.
    - Sentiment scores are calculated using the VADER sentiment analyzer, and listings with higher sentiment scores are prioritized for recommendations.
 
 ### Recommendations for Airbnb Hosts
