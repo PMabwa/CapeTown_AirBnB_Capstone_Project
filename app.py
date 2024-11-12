@@ -7,15 +7,15 @@ import matplotlib.pyplot as plt
 # Add caching for data loading
 @st.cache_data
 def load_data():
-    capetown_aggregated_df = pd.read_csv("capetown_aggregated_df.csv")
-    raw_df = pd.read_csv('capetown_airbnb_df.csv.gz', compression='gzip')
+    capetown_aggregated_df = pd.read_csv("data/capetown_aggregated_df.csv")
+    raw_df = pd.read_csv('data/capetown_airbnb_df.csv.gz', compression='gzip')
     raw_df['date'] = pd.to_datetime(raw_df['date'])
     raw_df['month'] = raw_df['date'].dt.month
     return capetown_aggregated_df, raw_df
 
 @st.cache_resource
 def load_model():
-    return joblib.load('polyregression_model.pkl')
+    return joblib.load('models/polyregression_model.pkl')
 
 # Initialize the app
 st.set_page_config(page_title="Airbnb Recommender System", layout="wide")
