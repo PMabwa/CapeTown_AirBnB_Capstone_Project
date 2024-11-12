@@ -10,12 +10,12 @@ from io import BytesIO
 # Add caching for data and model loading
 @st.cache_data
 def load_data():
-    raw_df = pd.read_csv('capetown_airbnb_df.csv.gz', compression='gzip')
+    raw_df = pd.read_csv('data/capetown_airbnb_df.csv.gz', compression='gzip')
     return raw_df
 
 @st.cache_resource
 def load_recommendation_model():
-    return joblib.load('baseline_model.pkl')
+    return joblib.load('models/baseline_model.pkl')
 
 
 # Initialize the app
